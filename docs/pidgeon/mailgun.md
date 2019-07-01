@@ -1,3 +1,8 @@
+---
+metaTitle: Mailgun | Pigeon by Pollygot
+lang: en-US
+---
+
 # Mailgun
 
 [Mailgun](mailgun.com) is a service for sending transactional emails.
