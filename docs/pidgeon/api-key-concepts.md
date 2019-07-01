@@ -40,10 +40,12 @@ Every request also requires the following elements:
 ```json5
 {
   "config": {
-    // App specific config - usually this is your credentials for the app.
+    // App specific config.
+    // Usually this is your credentials for the app.
   },
   "payload": {
-    // Function specific data. See each app for details.
+    // Function specific data. 
+    // See each app for details.
   }
 }
 ```
