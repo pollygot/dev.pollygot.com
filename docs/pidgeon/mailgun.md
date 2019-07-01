@@ -31,11 +31,15 @@ Example:
   "config": { 
     // Mailgun config
   },
-  "payload": { 
-    "to": "...",        // {string} The phone number of the person you are sending
-    "from": "...",      // {string} Your twilio number
-    "subject": "...",   // {string} The actual content of the text
-    "text": "...",      // {string} The actual content of the text
+  "payload": {
+    // Required
+    "to": "",        // {string} The email address you are sending to
+    "from": "",      // {string} The email address you are sending from 
+    "subject": "",   // {string} The email subject
+    "text": "",      // {string} The email content
+
+    // Optional
+    "from": "",      // [{string}] The display name of the sender
   }
 }
 ```
