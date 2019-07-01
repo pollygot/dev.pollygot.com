@@ -8,19 +8,15 @@ description: Twilio
 
 ## Config
 
-Every `twilio` request requires
+Every Twilio request requires the following config:
 
-- `accountSid` - Your Twilio Account SID
-- `token` - Your Twilio Account Token
-
-For example
 ```json5
 // POST 
 // Content-Type: application/json
 {
   "config": { 
-    "accountSid": "TWILIO_ACCOUNT_SID", 
-    "token": "process.env.TWILIO_TOKEN"
+    "accountSid": "TWILIO_ACCOUNT_SID", // {string} Your Twilio Account SID
+    "token": "process.env.TWILIO_TOKEN" // {string} Your Twilio Account Token
   },
   "payload": { 
     // Function specific payload
