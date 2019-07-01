@@ -34,19 +34,19 @@ Example:
   "payload": {
     // Required
     "to": "",        // {string} A comma separated list of email addresses
-    "from": "",      // {string} The email address you are sending from. Can include a name: <Display Name> email@address.com 
+    "from": "",      // {string} The email address you are sending from. Can include a name: Display Name <email@address.com>
     "subject": "",   // {string} The email subject
     "text": "",      // {string} The email content
 
     // Optional
-    "recipient-variables": "",  // [{string}] A set of key:value pairs for mail merge. See mail merge example below
+    "recipientVariables": "",  // [{object}] A set of key:value pairs for mail merge. See mail merge example below
   }
 }
 ```
 
 ## Mail merge 
 
-If you need to send custom text for each email, you can use `recipient-variables`. 
+If you need to send custom text for each email, you can use `recipientVariables` 
 
 For example:
 
@@ -59,10 +59,13 @@ For example:
   },
   "payload": {
     "from": "Excited User <me@samples.mailgun.org>",
-    "from": "alice@example.com, bob@example.com",
+    "to": "alice@example.com, bob@example.com",
     "subject": "Hey %recipient.first%",
     "text": "If you wish to unsubscribe, click http://mailgun/unsubscribe/%recipient.id%",
-    "recipient-variables": "{'alice@example.com': {'first':'Alice', 'id':1}, 'bob@example.com':{'first':'Bob', 'id':2}}"
+    "recipientVariables": {
+      "alice@example.com": { "first": "Alice", "id": 1 }, 
+      "bob@example.com": {"first": "Bob", "id": 2 }
+    }
   }
 }
 ```
