@@ -23,7 +23,11 @@ module.exports = {
         {
           title: 'API',
           collapsable: false,
-          children: ['api-key-concepts', 'twilio'],
+          children: [
+            'api-key-concepts', 
+            'sendgrid',
+            'twilio',
+          ],
         },
       ],
     },
