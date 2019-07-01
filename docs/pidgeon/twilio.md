@@ -1,7 +1,3 @@
----
-description: Twilio
----
-
 # Twilio
 
 [Twilio](twilio.com) is a service for sending SMS.
@@ -15,8 +11,8 @@ Every Twilio request requires the following config:
 // Content-Type: application/json
 {
   "config": { 
-    "accountSid": "TWILIO_ACCOUNT_SID", // {string} Your Twilio Account SID
-    "token": "TWILIO_TOKEN" // {string} Your Twilio Account Token
+    "twilioAccountSid": "TWILIO_ACCOUNT_SID", // {string} Your Twilio Account SID
+    "twilioToken": "TWILIO_TOKEN" // {string} Your Twilio Account Token
   },
   "payload": { 
     // Function specific payload

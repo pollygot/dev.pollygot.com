@@ -25,7 +25,7 @@ module.exports = {
           collapsable: false,
           children: [
             'api-key-concepts', 
-            'sendgrid',
+            'mailgun',
             'twilio',
           ],
         },
