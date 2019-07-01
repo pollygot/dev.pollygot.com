@@ -16,11 +16,11 @@ Every Twilio request requires the following config:
 {
   "config": { 
     "accountSid": "TWILIO_ACCOUNT_SID", // {string} Your Twilio Account SID
-    "token": "process.env.TWILIO_TOKEN" // {string} Your Twilio Account Token
+    "token": "TWILIO_TOKEN" // {string} Your Twilio Account Token
   },
   "payload": { 
     // Function specific payload
-  },
+  }
 }
 ```
 
@@ -39,7 +39,7 @@ To send a single SMS, ensure that the "to" inside "payload" is a single string.
     "to": "...",    // {string} The phone number of the person you are sending
     "from": "...",  // {string} Your twilio number
     "body": "...",  // {string} The actual content of the text
-  },
+  }
 }
 ```
 
@@ -61,6 +61,6 @@ To send multiple SMS, ensure that the "to" inside "payload" is an array of strin
     "to": ["...", "..."], // {string[]} A list of phone numbers 
     "from": "...",        // {string} Your twilio number
     "body": "...",        // {string} The actual content of the text
-  },
+  }
 }
 ```
