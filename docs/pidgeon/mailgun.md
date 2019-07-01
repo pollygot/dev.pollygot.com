@@ -20,12 +20,12 @@ Every Mailgun request requires the following config:
 }
 ```
 
-## Send single email
+## Sending emails
 
 Example:
 
 ```json5
-// POST https://pidgeon-api.pollygot.com/v1/mailgun/sms/send?apiKey=YOUR_API_KEY
+// POST https://pidgeon-api.pollygot.com/v1/mailgun/email/send?apiKey=YOUR_API_KEY
 // Content-Type: application/json
 {
   "config": { 
@@ -33,13 +33,36 @@ Example:
   },
   "payload": {
     // Required
-    "to": "",        // {string} The email address you are sending to
-    "from": "",      // {string} The email address you are sending from 
+    "to": "",        // {string} A comma separated list of email addresses
+    "from": "",      // {string} The email address you are sending from. Can include a name: <Display Name> email@address.com 
     "subject": "",   // {string} The email subject
     "text": "",      // {string} The email content
 
     // Optional
-    "from": "",      // [{string}] The display name of the sender
+    "recipient-variables": "",  // [{string}] A set of key:value pairs for mail merge. See mail merge example below
+  }
+}
+```
+
+## Mail merge 
+
+If you need to send custom text for each email, you can use `recipient-variables`. 
+
+For example:
+
+```json5
+// POST https://pidgeon-api.pollygot.com/v1/mailgun/email/send?apiKey=YOUR_API_KEY
+// Content-Type: application/json
+{
+  "config": { 
+    // Mailgun config
+  },
+  "payload": {
+    "from": "Excited User <me@samples.mailgun.org>",
+    "from": "alice@example.com, bob@example.com",
+    "subject": "Hey %recipient.first%",
+    "text": "If you wish to unsubscribe, click http://mailgun/unsubscribe/%recipient.id%",
+    "recipient-variables": "{'alice@example.com': {'first':'Alice', 'id':1}, 'bob@example.com':{'first':'Bob', 'id':2}}"
   }
 }
 ```
