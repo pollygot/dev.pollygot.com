@@ -8,17 +8,17 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: 'Blog', link: '/blog/' },
-      { text: 'Products', link: '/products/' },
+      { text: 'Docs', link: '/docs/' },
     ],
     sidebar: {
       '/blog/': [
         'some-post',
       ],
-      '/pidgeon/': [
+      '/flock/': [
         {
-          title: 'Pidgeon',
+          title: 'Flock',
           collapsable: false,
-          children: ['getting-started'],
+          children: ['/flock/'],
         },
         {
           title: 'API',

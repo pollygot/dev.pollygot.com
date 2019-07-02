@@ -1,5 +1,5 @@
 ---
-metaTitle: Mailgun | Pigeon by Pollygot
+metaTitle: Mailgun | Flock by Pollygot
 lang: en-US
 ---
 
@@ -30,7 +30,7 @@ Every Mailgun request requires the following config:
 Example:
 
 ```json5
-// POST https://pidgeon-api.pollygot.com/v1/mailgun/email/send?apiKey=YOUR_API_KEY
+// POST https://flock-api.pollygot.com/v1/mailgun/email/send?apiKey=YOUR_API_KEY
 // Content-Type: application/json
 {
   "config": { 
@@ -56,7 +56,7 @@ If you need to send custom text for each email, you can use `recipientVariables`
 For example:
 
 ```json5
-// POST https://pidgeon-api.pollygot.com/v1/mailgun/email/send?apiKey=YOUR_API_KEY
+// POST https://flock-api.pollygot.com/v1/mailgun/email/send?apiKey=YOUR_API_KEY
 // Content-Type: application/json
 {
   "config": { 

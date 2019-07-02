@@ -1,5 +1,5 @@
 ---
-metaTitle: Twilio | Pigeon by Pollygot
+metaTitle: Twilio | Flock by Pollygot
 lang: en-US
 ---
 
@@ -30,7 +30,7 @@ Every Twilio request requires the following config:
 To send a single SMS, ensure that the "to" inside "payload" is a single string.
 
 ```json5
-// POST https://pidgeon-api.pollygot.com/v1/twilio/sms/send?apiKey=YOUR_API_KEY
+// POST https://flock-api.pollygot.com/v1/twilio/sms/send?apiKey=YOUR_API_KEY
 // Content-Type: application/json
 {
   "config": { 
@@ -52,7 +52,7 @@ Twilio doesn't actually support sending batch messages so Pidgeon provides a con
 To send multiple SMS, ensure that the "to" inside "payload" is an array of strings.
 
 ```json5
-// POST https://pidgeon-api.pollygot.com/v1/twilio/sms/send?apiKey=YOUR_API_KEY
+// POST https://flock-api.pollygot.com/v1/twilio/sms/send?apiKey=YOUR_API_KEY
 // Content-Type: application/json
 {
   "config": { 
