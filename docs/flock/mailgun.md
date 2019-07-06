@@ -7,6 +7,12 @@ lang: en-US
 
 [Mailgun](mailgun.com) is a service for sending transactional emails.
 
+## Base URL
+
+```
+https://flock-api.pollygot.com/v1/mailgun/...?apiKey=YOUR_API_KEY
+```
+
 ## Config
 
 Every Mailgun request requires the following config:
