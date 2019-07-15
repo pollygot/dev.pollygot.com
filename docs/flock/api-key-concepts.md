@@ -5,12 +5,12 @@ lang: en-US
 
 # Key concepts
 
-Pidgeon is an RESTful on top of multiple notification services to overcome repetitive building and platform idiosyncrasies. 
+Flock is a RESTful on top of multiple notification services to overcome repetitive building and platform idiosyncrasies. 
 
 
 ## Always send a POST
 
-Pidgeon does not store any of your config for external services. Because of this, every request you make must be a `POST` request that includes the config of the app that you want to use. For example, to send an SMS message via Twilio, the request would look like this:
+Flock does not store any of your config for external services. Because of this, every request you make must be a `POST` request that includes the config of the app that you want to use. For example, to send an SMS message via Twilio, the request would look like this:
 
 ```json5
 // POST https://flock-api.pollygot.com/v1/twilio/send?apiKey=YOUR_API_KEY 

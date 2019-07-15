@@ -53,7 +53,7 @@ To send a single SMS, ensure that the "to" inside "payload" is a single string.
 
 ## Send batch SMS
 
-Twilio doesn't actually support sending batch messages so Pidgeon provides a convenience function.
+Twilio doesn't actually support sending batch messages so Flock provides a convenience function.
 
 To send multiple SMS, ensure that the "to" inside "payload" is an array of strings.
 
