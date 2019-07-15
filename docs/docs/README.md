@@ -10,5 +10,5 @@ sidebar: false
 - Troop (monkeys): Kong interface 
 - Swarm (bees): PostgREST
 - Parade/Herd (elephant): Postgres Managment
-- GraphQL 
+- Colony (Ants): GraphQL 
 
