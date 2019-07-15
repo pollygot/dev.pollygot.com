@@ -39,7 +39,7 @@ In case you are looking, it is not possible to send a direct message to a group 
 
 ## Send to Feed
 
-Sending to a feed or "wall".
+Sending to a "feed" or "wall".
 
 ```json5
 // POST https://flock-api.pollygot.com/v1/facebook/feed/send?apiKey=YOUR_API_KEY
