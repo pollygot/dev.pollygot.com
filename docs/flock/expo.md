@@ -35,14 +35,17 @@ Every Expo request requires the following config:
 To send a single Push Notification, ensure that the "to" inside "payload" is a single string.
 
 ```json5
-// POST https://flock-api.pollygot.com/v1/nexmo/sms/send?apiKey=YOUR_API_KEY
+// POST https://flock-api.pollygot.com/v1/expo/sms/send?apiKey=YOUR_API_KEY
 // Content-Type: application/json
 {
   "config": { 
     // Expo config
   },
   "payload": { 
-    "to": "...",          // {string} An Expo push token specifying the recipient of this message.
+    // Required
+    "to": "ExponentPushToken[...]",          // {string} An Expo push token specifying the recipient of this message.
+
+    // Optional
     "data": {},           // {object}? A JSON object delivered to your app.
     "title": "...",       // {string}? The title to display in the notification.
     "body": "...",        // {string}? The message to display in the notification
@@ -63,7 +66,7 @@ To send a single Push Notification, ensure that the "to" inside "payload" is a s
 
 ## Send batch Push Notification
 
-To send a multiple Push Notifications in one go, simply change the `payload` to an array of objects. For example
+To send the same Push Notification to multiple users, ensure that the "to" inside "expo" is an array of strings.
 
 ```json5
 // POST https://flock-api.pollygot.com/v1/nexmo/sms/send?apiKey=YOUR_API_KEY
@@ -72,9 +75,10 @@ To send a multiple Push Notifications in one go, simply change the `payload` to 
   "config": { 
     // Expo config
   },
-  "payload": [
-    { "to": "ExponentPushToken[xxxxxxxxxxxxxxxxxxxxxx]", "body": "Hello world!" },
-    { "to": "ExponentPushToken[xxxxxxxxxxxxxxxxxxxxxx]", "body": "You've got mail" }
-  ]
+  "payload": 
+    { 
+      "to": ["ExponentPushToken[...]", "ExponentPushToken[...]"], 
+      "body": "Hello world!" 
+    }
 }
 ```

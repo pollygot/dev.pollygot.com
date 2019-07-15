@@ -50,7 +50,7 @@ Example:
     "text": "",      // {string} The email content
 
     // Optional
-    "recipientVariables": "",  // [{object}] A set of key:value pairs for mail merge. See mail merge example below
+    "recipientVariables": "",  // {object}? A set of key:value pairs for mail merge. See mail merge example below
   }
 }
 ```
