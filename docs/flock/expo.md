@@ -1,9 +1,9 @@
 ---
-metaTitle: Nexmo | Flock by Pollygot
+metaTitle: Expo | Flock by Pollygot
 lang: en-US
 ---
 
-# Nexmo
+# Expo
 
 A RESTful API for interacting with [Expo](https://docs.expo.io/versions/latest/).
 

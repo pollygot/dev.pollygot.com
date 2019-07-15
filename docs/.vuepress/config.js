@@ -25,6 +25,7 @@ module.exports = {
           collapsable: false,
           children: [
             'api-key-concepts', 
+            'expo',
             'facebook',
             'mailgun',
             'nexmo',
