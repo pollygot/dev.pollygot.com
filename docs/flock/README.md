@@ -14,5 +14,5 @@ Flock is an API on top of multiple notification services to overcome repetitive 
 ## Why 
 
 - Standardized interface for communicating with many services
-- You can use your favourite RestFUL library, rather than instally many third-party libraries
+- You can use your favourite RESTful library, rather than instally many third-party libraries
 - Flock provides various convenience functions for extending some services (for example, bulk sending of messages) 
