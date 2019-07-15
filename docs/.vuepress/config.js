@@ -27,6 +27,8 @@ module.exports = {
             'api-key-concepts', 
             'facebook',
             'mailgun',
+            'nexmo',
+            'slack',
             'twilio',
           ],
         },
